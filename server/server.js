@@ -28,7 +28,9 @@ app.post('/todos', (req, res) => {
 
 app.listen(3000, ()=> {
     console.log('Started on port 3000');
-})
+});
+
+module.exports = {app};
 
 // var newTodo = new Todo({
 //     text:'Cook dinner'
@@ -57,11 +59,11 @@ app.listen(3000, ()=> {
 //     console.log('Unable to save otherTodo', err);
 // }})
 
-var newUser = new User({
-    email: "   abcde   "
-});
-newUser.save().then((doc)=> {
-    console.log('Save newUser', doc)
-}, (e) => {
-    console.log('Unable to save newUser', err);
-});
+// var newUser = new User({
+//     email: "   abcde   "
+// });
+// newUser.save().then((doc)=> {
+//     console.log('Save newUser', doc)
+// }, (e) => {
+//     console.log('Unable to save newUser', err);
+// });

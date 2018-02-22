@@ -1,6 +1,4 @@
-
-var env = process.env.NODE_ENV;
-
+require('./config/config');
 const _ = require('lodash');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -14,7 +12,7 @@ var {User} = require('./models/user');
 // mongoose.connect('mongodb://localhost:27017/TodoApp');
 
 var app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.json());
 

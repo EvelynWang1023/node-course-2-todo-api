@@ -8,6 +8,8 @@ var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
 var {authenticate} = require('./middleware/authenticate'); // Leaving off the js extension
+const bcrypt = require('bcryptjs');
+
 // var mongoose = require('mongoose');
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost:27017/TodoApp');

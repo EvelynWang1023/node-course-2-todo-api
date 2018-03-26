@@ -7,7 +7,7 @@ var {ObjectID} = require('mongodb');
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
-var {authenticate} = require('./middleware/authenticate');
+var {authenticate} = require('./middleware/authenticate'); // Leaving off the js extension
 // var mongoose = require('mongoose');
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost:27017/TodoApp');
@@ -111,8 +111,11 @@ app.post('/users',(req, res) => {
     })
 });
 
+
+
 app.get('/users/me', authenticate, (req, res) => {
-  res.send(req.user);
+    var token = req.header('x-auth');
+    res.send(req.user);
 });
 
 
